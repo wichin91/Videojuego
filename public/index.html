@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuego Pokemon</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">POKEMON</h1>
+        <img src="./images/pokeball.png" alt="Pokeball">
+        <div id="nombre-div" class="nombre">PJ: <span id="jugador-nombre"></span></div>
+
+
+        <section class="nombre-jugador">
+            <h2 class="subtitulo">Nombre del jugador:</h2>
+            <input type="text" name="nombre" id="input-nombre">
+            <button id="boton-nombre" class="boton">Jugar</button>
+        </section>
+
+
+        <section class="seleccionar-mascota">
+            <h2 class="subtitulo">Elige tu pokemon:</h2>
+            <div id="contenedor-tarjetas" class="tarjetas"></div>
+            <button id="boton-mascota" class="boton">Seleccionar</button>
+        </section>
+
+
+        <section class="mover-mapa">
+            <h2 class="subtitulo">Recorre el mapa:</h2>
+            <canvas id="mapa"></canvas>
+            <div class="botones-arrows">
+                <button id="arrow-up" class="boton">⬆</button>
+                <button id="arrow-left" class="boton">⬅</button>
+                <button id="arrow-right" class="boton">➡</button>
+                <button id="arrow-down" class="boton">⬇</button>
+            </div>
+        </section>
+
+
+        <section class="seleccionar-ataque">
+            <div class="subtitulo">Te quedan <span id="vidas"></span> vidas.</div>
+            <div class="subtitulo">Tu oponente es: 
+                <span id="oponente" class="nombre"></span>
+            </div>
+            <h2 class="subtitulo">Elige tu ataque: 🌱💧🔥</h2>
+            <div id="contenedor-ataques" class="botones-ataque"></div>
+        </section>
+
+
+        <section class="mensaje">
+            <div id="resultado"></div>
+            <button id="boton-mensaje" class="boton">OK</button>
+        </section>
+
+
+        <section class="reiniciar">
+            <div class="mensaje-final">Lo siento. Has perdido el juego.</div>
+            <button id="boton-reiniciar" class="boton">Reiniciar</button>
+        </section>
+
+
+        <script src="./pokemon.js"></script>
+        <script src="./scripts.js"></script>
+        
+    </div>
+</body>
+</html>

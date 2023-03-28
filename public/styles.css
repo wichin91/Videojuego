@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Press+Start+2P&display=swap');
+
+:root {
+    --bg1: #8175AF;
+    --bg2: #817F51;
+    --pk1: #F5CB0A;
+    --pk2: #1a3972;
+    --pk2-: #344b77;
+    --fredoka: 'Fredoka One', cursive;
+    --press: 'Press Start 2P', cursive;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--press);
+}
+body {
+    background-image: url('./images/arena.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    padding: 20px;
+}
+.titulo {
+    color: var(--pk1);
+    font-size: large;
+    text-align: center;
+    text-shadow: 1px 1px 2px var(--pk2), -1px 1px 2px var(--pk2), 1px -1px 2px var(--pk2), -1px -1px 2px var(--pk2);
+}
+.container > img {
+    display: block;
+    margin: auto;
+    width: 90px;
+    height: auto;
+}
+.nombre {
+    width: auto;
+    display: none;
+    margin: 10px;
+    padding: 10px;
+    color: var(--pk2);
+    background-color: lightgray;
+    font-size: small;
+    text-align: center;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+.subtitulo {
+    color: var(--pk2);
+    font-size: medium;
+    text-shadow: 1px 1px 2px var(--pk1), -1px 1px 2px var(--pk1), 1px -1px 2px var(--pk1), -1px -1px 2px var(--pk1);
+}
+.boton {
+    padding: 15px;
+    margin: 20px;
+    background: var(--pk2);
+    color: lightgray;
+    font: small var(--press);
+    box-shadow: 3px 3px black;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+.boton:hover {
+    background: var(--pk2-);
+    box-shadow: 4px 4px black;
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+.boton:active {
+    box-shadow: 0 0;
+    transform: translate(3px, 3px);
+}
+
+/* Nombre del Jugador */
+.nombre > span {
+    text-decoration: underline;
+}
+.nombre-jugador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nombre-jugador input {
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    font: x-small var(--press);
+    border: black solid 2px;
+    border-radius: 6px;
+}
+
+/* Seleccionar Mascota */
+.seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.tarjeta-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    height: 150px;
+    padding: 10px;
+    font-size: small;
+    color: var(--pk2);
+    background: lightgray;
+    box-shadow: 3px 3px black;
+    border: black solid 3px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.tarjeta-mascota img {
+    display: block;
+    margin: auto;
+    width: 80px;
+}
+.tarjetas input {
+    display: none;
+}
+
+/* Mapa */
+.mover-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mover-mapa canvas {
+    /* width: 320px;
+    height: 200px; */
+    background-color: lightgray;
+    background-image: url(./images/mapa.png);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+}
+.botones-arrows {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: 
+      ". up ."
+      "left down right";
+}
+.botones-arrows button {
+    padding: 5px;
+    margin: 5px;
+    width: 40px;
+    font-weight: bold;
+}
+#arrow-up {
+    grid-area: up;
+}
+#arrow-left {
+    grid-area: left;
+}
+#arrow-down {
+    grid-area: down;
+}
+#arrow-right {
+    grid-area: right;
+}
+
+/* Ataques */
+.seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seleccionar-ataque .nombre{
+    display: inline-block;
+    box-sizing:content-box;
+    text-shadow: 0 0;
+}
+.botones-ataque {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.botones-ataque button {
+    width: 150px;
+    margin: 10px
+}
+#vidas {
+    height: 100px;
+    color: red;
+}
+
+/* Mensajes */
+.mensaje, 
+.reiniciar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 50px;
+    bottom: 50px;
+    margin: 10px;
+    padding-top: 20px;
+    background-color: lightgray;
+    border: var(--pk2) solid 8px;
+    border-radius: 20px;
+}
+.mensaje > div,
+.reiniciar > div {
+    padding: 20px;
+    color: var(--pk2);
+    font-size: medium;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .subtitulo {
+      font-size: small;
+    }
+    .tarjetas {
+        flex-direction: column;
+    }
+    .tarjeta-mascota {
+        width: 120px;
+        height: 90px;
+    }
+    .tarjeta-mascota img {
+        width: 45px;
+    }
+    .tarjeta-mascota p {
+        font-size: x-small;
+        margin: 5px 0;
+    }
+    .botones-ataque {
+        flex-direction: column;
+    }
+  }
